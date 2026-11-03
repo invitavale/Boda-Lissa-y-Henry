@@ -123,7 +123,7 @@ function setupMusic() {
 // subiendo suavemente y enfocándose.
 function setupScrollReveal() {
     if (!('IntersectionObserver' in window)) return;
-    const items = document.querySelectorAll('.content section > *:not(.section-divider), .content .footer-content');
+    const items = document.querySelectorAll('.content section > *:not(.section-divider), .content .countdown-section > *, .content .footer-content');
     const io = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -141,7 +141,30 @@ function setupScrollReveal() {
 }
 
 // Inicializar cuando el DOM esté listo
+// Calendario del mes de la boda con el día marcado (semana de lunes a domingo).
+// Para otra boda, basta con cambiar WEDDING_DATE.
+const WEDDING_DATE = { anio: 2027, mes: 0, dia: 23 }; // mes: 0 = enero
+function renderCalendar() {
+    const grid = document.getElementById('calGrid');
+    const titulo = document.getElementById('calMes');
+    if (!grid) return;
+    const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const { anio, mes, dia } = WEDDING_DATE;
+    if (titulo) titulo.textContent = MESES[mes] + ' ' + anio;
+    let html = ['L','M','M','J','V','S','D'].map(d => '<span class="cal-h">' + d + '</span>').join('');
+    const offset = (new Date(anio, mes, 1).getDay() + 6) % 7;
+    const total = new Date(anio, mes + 1, 0).getDate();
+    for (let i = 0; i < offset; i++) html += '<span></span>';
+    for (let d = 1; d <= total; d++) {
+        html += d === dia
+            ? '<span class="cal-d on" aria-current="date"><i>' + d + '</i></span>'
+            : '<span class="cal-d">' + d + '</span>';
+    }
+    grid.innerHTML = html;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    renderCalendar();
     initializeCountdown();
     initializeCarousel();
     initializeGuestGreeting();

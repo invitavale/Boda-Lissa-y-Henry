@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.google.com">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=EB+Garamond:ital,wght@0,400..600;1,400..500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CCSB.css?v=11">
+    <link rel="stylesheet" href="CCSB.css?v=13">
     <link rel="stylesheet" href="regalo-modal.css?v=4">
         <style>
         /* Carrusel: 3 imágenes simultáneamente con foto central destacada */
@@ -215,7 +215,7 @@
         .intro-overlay {
             position: fixed; inset: 0; z-index: 10050;
             display: flex; align-items: center; justify-content: center;
-            background: #26422b url('intro-sobre-poster.jpg?v=3') center/cover no-repeat;
+            background: #EFE4D0 url('intro-sobre-poster.jpg?v=4') center/cover no-repeat;
             cursor: pointer; overflow: hidden;
             -webkit-tap-highlight-color: transparent;
             transition: opacity 1.1s ease, visibility 1.1s ease;
@@ -269,6 +269,16 @@
             70%  { box-shadow: 0 0 0 22px rgba(214, 189, 145, 0); transform: scale(1); }
             100% { box-shadow: 0 0 0 0 rgba(214, 189, 145, 0); transform: scale(0.95); }
         }
+        /* Sobre claro (marfil): indicador en chocolate y dorado oscuro para que se lea */
+        .intro-hint { color: #5B3324; text-shadow: 0 1px 2px rgba(255, 250, 240, 0.9), 0 0 14px rgba(255, 250, 240, 0.8); font-weight: 500; }
+        .intro-tap { border-color: rgba(140, 104, 46, 0.9); background: rgba(255, 250, 240, 0.35); }
+        .intro-tap::after { background: #A07A34; box-shadow: 0 0 12px rgba(160, 122, 52, 0.7); }
+        @keyframes intro-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(160, 122, 52, 0.55); transform: scale(0.95); }
+            70%  { box-shadow: 0 0 0 22px rgba(160, 122, 52, 0); transform: scale(1); }
+            100% { box-shadow: 0 0 0 0 rgba(160, 122, 52, 0); transform: scale(0.95); }
+        }
+        .intro-skip { background: rgba(91, 51, 36, 0.75); }
         .intro-overlay.is-playing { cursor: default; }
         .intro-overlay.is-playing .intro-hint { opacity: 0; }
         .intro-skip {
@@ -437,8 +447,8 @@
 <body>
     <!-- Intro: sobre animado (hay que tocar para abrir) -->
     <div id="introOverlay" class="intro-overlay" role="button" aria-label="Toca para abrir la invitación">
-        <video id="introVideo" class="intro-video" src="intro-sobre.mp4?v=3" poster="intro-sobre-poster.jpg?v=3" playsinline webkit-playsinline muted preload="auto"></video>
-        <img id="introAnim" class="intro-video intro-anim" data-src="intro-sobre.webp?v=3" alt="" hidden>
+        <video id="introVideo" class="intro-video" src="intro-sobre.mp4?v=4" poster="intro-sobre-poster.jpg?v=4" playsinline webkit-playsinline muted preload="auto"></video>
+        <img id="introAnim" class="intro-video intro-anim" data-src="intro-sobre.webp?v=4" alt="" hidden>
         <div class="intro-flash"></div>
         <div class="intro-hint">
             <span class="intro-tap"></span>
@@ -487,11 +497,9 @@
 
         <!-- Content -->
         <div class="content">
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
-        <!-- Countdown -->
-        <section class="countdown-section">
+        <div class="section-divider pincel a-oscuro" aria-hidden="true"></div>
+        <!-- Countdown + calendario (fondo chocolate) -->
+        <div class="countdown-section tono-oscuro">
             <div id="guestSection" class="guest-section" style="display:none;">
                 <div id="guestBadge" class="guest-badge">0</div>
                 <h2 class="guest-title">¡Bienvenidos!</h2>
@@ -517,58 +525,94 @@
                     <div class="countdown-label">SEGUNDOS</div>
                 </div>
             </div>
+            <div class="calendario" aria-label="Calendario: sábado 23 de enero de 2027">
+                <p class="cal-kicker">Guarda la fecha</p>
+                <p class="cal-mes" id="calMes">Enero 2027</p>
+                <div class="cal-grid" id="calGrid"></div>
+            </div>
+        </div>
+
+        <!-- Ceremonia y Recepción (fondo marfil, cada una en su tarjeta) -->
+        <div class="section-divider pincel a-claro" aria-hidden="true"></div>
+        <section class="events-section">
+            <div class="lugares-grid">
+                <article class="lugar-card">
+                    <h3 class="lugar-titulo">Ceremonia</h3>
+                    <img class="lugar-ilus" src="iconos/insp/iglesia.webp" alt="Ilustración de una iglesia">
+                    <p class="lugar-fecha">Sábado 23 de enero, 2027</p>
+                    <div class="lugar-fila">
+                        <span class="lugar-hora">5:00 PM</span>
+                        <span class="lugar-barra"></span>
+                        <span class="lugar-sitio">Santuario Nuestra Señora de la Altagracia</span>
+                    </div>
+                    <p class="lugar-dir">Calle Las Mercedes, Ciudad Colonial, Santo Domingo, República Dominicana</p>
+                    <p class="lugar-nota">Por favor ser puntual</p>
+                    <button class="btn-wedding" onclick="openLocation('ceremony')">¿Cómo llegar?</button>
+                </article>
+
+                <article class="lugar-card">
+                    <h3 class="lugar-titulo">Recepción</h3>
+                    <img class="lugar-ilus lugar-ilus-ancha" src="iconos/insp/salon.webp" alt="Ilustración del salón">
+                    <p class="lugar-fecha">Sábado 23 de enero, 2027</p>
+                    <div class="lugar-fila">
+                        <span class="lugar-hora">7:00 PM</span>
+                        <span class="lugar-barra"></span>
+                        <span class="lugar-sitio">Hotel Dominican Fiesta</span>
+                    </div>
+                    <p class="lugar-dir">Av. Anacaona #101, Los Cacicazgos, Santo Domingo, República Dominicana</p>
+                    <p class="lugar-nota">Recepción, cena y fiesta</p>
+                    <button class="btn-wedding" onclick="openLocation('reception')">¿Cómo llegar?</button>
+                </article>
+            </div>
         </section>
 
-        <!-- Ceremony & Celebration -->
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
-        <section class="events-section">
-            <div class="events-container">
-                <!-- Ceremony -->
-                <div class="event-card">
-                    <div class="event-icon modern-icon ceremonia-icon">
-                        <img src="iconos/anillos.webp" alt="Anillos de boda" class="theme-icon-img ceremonia-img">
-                    </div>
-                    <h3 class="event-title">Ceremonia</h3>
-                    <div class="event-details">
-                        <h4>Día</h4>
-                        <p>Sábado 23 de Enero, 2027 - 5:00pm</p>
-                        <p class="event-punctuality">Por favor ser puntual</p>
-                    </div>
-                    <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Santuario Nuestra Señora de la Altagracia</p>
-                        <p class="event-address">Calle Las Mercedes, Ciudad Colonial, Santo Domingo, República Dominicana</p>
-                    </div>
-                    <button class="btn-wedding" onclick="openLocation('ceremony')">¿Cómo llegar?</button>
+        <!-- Itinerario (nuevo) — actividades de ejemplo, editar horas y textos aquí -->
+        <div class="section-divider pincel a-oscuro" aria-hidden="true"></div>
+        <section class="itinerario-section">
+            <h2 class="section-title">Itinerario</h2>
+            <p class="section-subtitle">Así viviremos juntos esta noche tan especial.</p>
+            <div class="timeline">
+                <div class="t-item">
+                    <div class="t-ico"><img src="iconos/insp/iglesia.webp" alt=""></div>
+                    <div class="t-linea"></div>
+                    <div class="t-tx"><b>5:00 PM</b><span>Ceremonia religiosa</span><small>Nuestra unión bajo la bendición de Dios.</small></div>
                 </div>
-
-                <!-- Celebration -->
-                <div class="event-card">
-                    <div class="event-icon modern-icon toast-icon">
-                        <img src="iconos/copas-anim.webp?v=1" alt="Copas brindando" class="toast-icon-img copas-anim" loading="lazy">
-                    </div>
-                    <h3 class="event-title">Recepción</h3>
-                    <div class="event-details">
-                        <h4>Hora</h4>
-                        <p>Sábado 23 de Enero, 2027 - 7:00pm</p>
-                        <p class="event-punctuality">Recepción, cena y fiesta</p>
-                    </div>
-                    <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Hotel Dominican Fiesta</p>
-                        <p class="event-address">Av. Anacaona #101, Los Cacicazgos, Santo Domingo, República Dominicana</p>
-                    </div>
-                    <button class="btn-wedding" onclick="openLocation('reception')">¿Cómo llegar?</button>
+                <span class="t-dot"></span>
+                <div class="t-item">
+                    <div class="t-tx"><b>7:00 PM</b><span>Recepción y bienvenida</span><small>Llegada y acomodo de los invitados.</small></div>
+                    <div class="t-linea"></div>
+                    <div class="t-ico"><img src="iconos/insp/salon.webp" alt=""></div>
                 </div>
+                <span class="t-dot"></span>
+                <div class="t-item">
+                    <div class="t-ico"><img src="iconos/insp/mesa.webp" alt=""></div>
+                    <div class="t-linea"></div>
+                    <div class="t-tx"><b>8:00 PM</b><span>Cena</span><small>Compartir, cenar y celebrar juntos.</small></div>
+                </div>
+                <span class="t-dot"></span>
+                <div class="t-item">
+                    <div class="t-tx"><b>9:00 PM</b><span>Brindis de los novios</span><small>Celebramos juntos nuestro amor.</small></div>
+                    <div class="t-linea"></div>
+                    <div class="t-ico"><img src="iconos/insp/brindis.webp" alt=""></div>
+                </div>
+                <span class="t-dot"></span>
+                <div class="t-item">
+                    <div class="t-ico"><img src="iconos/insp/ramo.webp" alt=""></div>
+                    <div class="t-linea"></div>
+                    <div class="t-tx"><b>9:30 PM</b><span>Lanzamiento del ramo</span><small>Buenos deseos para la próxima novia.</small></div>
+                </div>
+                <span class="t-dot"></span>
+                <div class="t-item">
+                    <div class="t-tx"><b>10:00 PM</b><span>¡Hora loca!</span><small>Música, baile y mucha diversión.</small></div>
+                    <div class="t-linea"></div>
+                    <div class="t-ico"><img src="iconos/insp/fiesta.webp" alt=""></div>
+                </div>
+                <span class="t-dot"></span>
             </div>
         </section>
 
         <!-- Party Information -->
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
+        <div class="section-divider pincel a-claro" aria-hidden="true"></div>
         <section class="party-section">
             <div class="party-container">
                 <h2 class="section-title">Detalles</h2>
@@ -576,8 +620,9 @@
 
                 <div class="party-grid">
                     <div class="party-card">
-                        <div class="party-icon modern-icon bowtie-icon">
-                            <img src="iconos/vestimenta.webp" alt="Corbatín" class="theme-icon-img vestimenta-img">
+                        <div class="dress-ilus">
+                            <img src="iconos/insp/dress-hombres.webp" alt="Ejemplos de vestimenta para caballeros">
+                            <img src="iconos/insp/dress-mujeres.webp" alt="Ejemplos de vestimenta para damas">
                         </div>
                         <h3>Código de Vestimenta</h3>
                         <button class="btn-wedding" onclick="showDressCode()">Ver más</button>
@@ -585,7 +630,7 @@
 
                     <div class="party-card">
                         <div class="party-icon modern-icon static-icon">
-                            <img src="iconos/fotos.webp" alt="Subir fotos" class="theme-icon-img fotos-img">
+                            <img src="iconos/insp/camara.webp" alt="Cámara de fotos" class="theme-icon-img fotos-img insp-ico">
                         </div>
                         <h3>Comparte tus Fotos</h3>
                         <p>Ayúdanos a capturar cada momento, sube las fotos que tomes durante la fiesta.</p>
@@ -594,10 +639,10 @@
 
                     <div class="party-card">
                         <div class="party-icon modern-icon">
-                            <img src="iconos/sobre.webp" alt="Notas" class="theme-icon-img tips-img">
+                            <img src="iconos/insp/no-ninos.webp" alt="Solo adultos" class="theme-icon-img tips-img insp-ico">
                         </div>
                         <h3>Una noche solo para adultos</h3>
-                        <p class="party-quote">Con cariño, les pedimos que los pequeños se queden en casa.</p>
+                        <p class="party-quote">Amamos a sus pequeños, pero hemos preparado con mucho cariño esta fiesta solo para adultos, para que todos puedan relajarse y disfrutar la noche al máximo.</p>
                         <p class="party-thanks">¡Gracias por su comprensión!</p>
                     </div>
                 </div>
@@ -605,9 +650,7 @@
         </section>
 
         <!-- Gifts -->
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
+        <div class="section-divider pincel a-oscuro" aria-hidden="true"></div>
         <section class="gifts-section">
             <div class="gifts-container">
                 <h2 class="section-title">Regalos</h2>
@@ -622,9 +665,7 @@
         </section>
 
         <!-- RSVP -->
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
+        <div class="section-divider pincel a-claro" aria-hidden="true"></div>
         <section class="rsvp-section">
             <div class="rsvp-container">
                 <h2 class="section-title">Confirma tu Asistencia</h2>
@@ -639,9 +680,7 @@
         </section>
 
         <!-- Footer -->
-        <div class="section-divider">
-            <img src="separador-flores.png?v=6" alt="">
-        </div>
+        <div class="section-divider pincel a-pie" aria-hidden="true"></div>
         <footer class="footer">
             <div class="footer-content">
                 <p>Con amor,</p>
@@ -678,7 +717,7 @@
             } catch(e) {}
         })();
         </script>
-        <script src="JAVAB.js?v=22" defer></script>
+        <script src="JAVAB.js?v=23" defer></script>
         <script src="regalo-modal.js?v=4" defer></script>
 </body>
 </html>
