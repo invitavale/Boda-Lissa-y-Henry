@@ -153,8 +153,8 @@
     window.closeGiftModal = closeGiftModal;
     window.showGifts = openGiftModal; // compatibilidad con onclick="showGifts()"
     /* ----- Código de vestimenta (imagen flotante) ----- */
-    const DRESS_IMG = 'codigo-vestimenta.jpg?v=3';
-    const DRESS_IMG_MOVIL = 'codigo-vestimenta-movil.jpg?v=3';
+    const DRESS_IMG = 'codigo-vestimenta.jpg?v=4';
+    const DRESS_IMG_MOVIL = 'codigo-vestimenta-movil.jpg?v=4';
 
     function buildDress() {
         if (document.getElementById('rgDressOverlay')) return;

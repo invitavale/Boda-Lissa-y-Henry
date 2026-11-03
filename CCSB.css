@@ -2100,7 +2100,7 @@ html, body { background-color: #F3EBDD; }
     width: 240px;
     height: 30px;
     margin: 0.5rem auto 0;
-    background: center / contain no-repeat url("iconos/separador-titulo.webp");
+    background: center / contain no-repeat url("iconos/separador-titulo.webp?v=2");
 }
 @media (max-width: 480px) {
     .section-title::after,
@@ -2421,3 +2421,28 @@ body { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; }
 @media (max-width: 768px) { .top-garland { width: 100% !important; top: -48px !important; } }
 /* Sin guirnalda superior en la portada */
 .top-garland { display: none !important; }
+/* Títulos en caligrafía elegante */
+.section-title,
+.event-title,
+.party-card h3,
+.footer-content h3,
+.modal-title-dark {
+    font-family: 'Pinyon Script', 'Great Vibes', cursive !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.15 !important;
+}
+.section-title { font-size: clamp(2.9rem, 8vw, 4rem) !important; }
+.event-title { font-size: 2.9rem !important; }
+.party-card h3 { font-size: 2.1rem !important; }
+.footer-content h3 { font-size: clamp(2rem, 7vw, 2.8rem) !important; }
+.modal-title-dark { font-size: 2.2rem !important; }
+.section-title::after,
+.content > section:nth-of-type(even) .section-title::after {
+    width: 300px !important; height: 52px !important; margin-top: 0.2rem !important;
+}
+@media (max-width: 480px) {
+    .section-title::after,
+    .content > section:nth-of-type(even) .section-title::after { width: 250px !important; height: 44px !important; }
+}
