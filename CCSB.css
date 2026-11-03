@@ -1858,9 +1858,9 @@ html, body { background-color: #F3EBDD; }
 .countdown-section .section-title::before {
     content: "";
     display: block;
-    width: 76px;
-    height: 70px;
-    margin: 0 auto 0.4rem;
+    width: 84px;
+    height: 78px;
+    margin: 0 auto 0.5rem;
     background: center / contain no-repeat url("iconos/reloj.webp");
     filter: drop-shadow(0 5px 8px rgba(38, 56, 42, 0.22));
 }
@@ -2092,4 +2092,124 @@ html, body { background-color: #F3EBDD; }
     line-height: 1.4;
     color: #A47759;
     margin-bottom: 0.9rem;
+}
+
+/* Separador de títulos: línea dorada con flor rosa (imagen) */
+.section-title::after,
+.content > section:nth-of-type(even) .section-title::after {
+    width: 240px;
+    height: 30px;
+    margin: 0.5rem auto 0;
+    background: center / contain no-repeat url("iconos/separador-titulo.webp");
+}
+@media (max-width: 480px) {
+    .section-title::after,
+    .content > section:nth-of-type(even) .section-title::after { width: 210px; height: 26px; }
+}
+
+/* Detalles: fondo floral de línea, suave y difuminado */
+.party-section { isolation: isolate; }
+.party-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: center / cover no-repeat url("iconos/fondo-floral.webp");
+    opacity: 0.3;
+    filter: blur(1.2px);
+}
+.party-card .party-thanks {
+    font-family: 'Playfair Display', serif;
+    color: #344C38;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+@media (min-width: 769px) {
+    .countdown-section { padding-bottom: 4.75rem !important; }
+}
+/* Detalles en celular/tablet: fondo floral vertical */
+@media (max-width: 768px) {
+    .party-section::before {
+        background-image: url("iconos/fondo-floral-movil.webp");
+        background-size: 100% 100%;   /* el marco completo encaja exacto en la sección */
+        background-position: center;
+        inset: 0;
+        opacity: 0.45;
+        filter: blur(1.6px);
+    }
+}
+
+/* ===== Detalles: ramos florales colocados a mano (nítidos y suaves) ===== */
+.party-section::before,
+.content > section.party-section::before {
+    inset: 0 !important;
+    opacity: 0.62 !important;
+    filter: none !important;
+    background-repeat: no-repeat !important;
+    background-image:
+        url("iconos/ramos/tl.webp"),
+        url("iconos/ramos/tr.webp"),
+        url("iconos/ramos/ml.webp"),
+        url("iconos/ramos/mr.webp"),
+        url("iconos/ramos/mr2-e.webp"),
+        url("iconos/ramos/mr2.webp"),
+        url("iconos/ramos/bl.webp"),
+        url("iconos/ramos/br.webp"),
+        url("iconos/ramos/bc.webp"),
+        url("iconos/ramos/bc-e.webp") !important;
+    background-size:
+        300px auto, 210px auto, 270px auto, 290px auto, 260px auto, 260px auto, 280px auto, 250px auto, 260px auto, 260px auto !important;
+    background-position:
+        left -60px top 10px,
+        right -40px top 0px,
+        left -110px top 40%,
+        right -120px top 30%,
+        left -100px top 68%,
+        right -90px top 62%,
+        left -70px bottom 0px,
+        right -60px bottom 10px,
+        left 22% bottom -40px,
+        right 22% bottom -40px !important;
+}
+@media (max-width: 768px) {
+    .party-section::before,
+    .content > section.party-section::before {
+        opacity: 0.6 !important;
+        background-image:
+        url("iconos/ramos/tl.webp"),
+        url("iconos/ramos/tr.webp"),
+        url("iconos/ramos/mr.webp"),
+        url("iconos/ramos/ml.webp"),
+        url("iconos/ramos/br-e.webp"),
+        url("iconos/ramos/mr2.webp"),
+        url("iconos/ramos/ml-e.webp"),
+        url("iconos/ramos/mr2-e.webp"),
+        url("iconos/ramos/bl-e.webp"),
+        url("iconos/ramos/tl-e.webp"),
+        url("iconos/ramos/bl.webp"),
+        url("iconos/ramos/br.webp"),
+        url("iconos/ramos/bc.webp") !important;
+        background-size:
+        220px auto, 160px auto, 210px auto, 200px auto, 180px auto, 220px auto, 190px auto, 210px auto, 190px auto, 190px auto, 210px auto, 190px auto, 200px auto !important;
+        background-position:
+        left -70px top 20px,
+        right -45px top 10px,
+        right -95px top 19%,
+        left -100px top 27%,
+        left -85px top 38%,
+        right -105px top 43%,
+        right -100px top 56%,
+        left -105px top 60%,
+        right -95px top 76%,
+        left -90px top 82%,
+        left -80px bottom 10px,
+        right -70px bottom 20px,
+        center bottom -60px !important;
+    }
+}
+/* Legibilidad del encabezado de Detalles sobre los ramos */
+.party-section .section-title,
+.party-section .section-subtitle {
+    text-shadow: 0 0 6px #F6F0E4, 0 0 12px #F6F0E4, 0 0 18px #F6F0E4;
 }

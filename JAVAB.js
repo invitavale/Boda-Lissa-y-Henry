@@ -353,8 +353,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // álbum de fotos compartido, formulario de RSVP, etc.).
 function openLocation(location) {
     const urls = {
-        ceremony: 'https://www.google.com/maps/search/?api=1&query=18.475217,-69.885717',
-        reception: 'https://www.google.com/maps/search/?api=1&query=Dominican+Fiesta+Hotel+Av.+Anacaona+101+Santo+Domingo'
+        ceremony: 'https://maps.app.goo.gl/XxN4G3ywyxeR2oJy7',
+        reception: 'https://maps.app.goo.gl/326dkUQWrnnjdfjr7'
     };
     const url = urls[location];
     if (url) {
@@ -363,7 +363,7 @@ function openLocation(location) {
 }
 
 // Álbum compartido de Google Fotos (antes: https://photos.app.goo.gl/p9PGQHWrvLG1Bpj28)
-const PHOTO_ALBUM_URL = 'https://photos.app.goo.gl/b2UVjmavA8Pwxa6X6';
+const PHOTO_ALBUM_URL = 'https://photos.app.goo.gl/fey51JWfjgCk88r79';
 
 function sharePhotos() {
     // Abre el álbum compartido de Google Fotos en una pestaña nueva
@@ -404,7 +404,7 @@ function showGifts() {
 // Confirmación de asistencia (Google Form)
 // (antes: https://docs.google.com/forms/d/e/1FAIpQLSdIYoM33yAkMmS4DZCRVmO9_IE0gZT4eEw8cV0r2PgWlYE0Ag/viewform?usp=header)
 function confirmAttendance() {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLScxojtt9jqEa84t0NWAciUShVSkWZlxG8qITy1HFrg_ssM1qA/viewform?usp=publish-editor', '_blank', 'noopener');
+    window.open('https://www.zola.com/wedding/henryandlissa', '_blank', 'noopener');
 }
 
 // Sistema de Toast
