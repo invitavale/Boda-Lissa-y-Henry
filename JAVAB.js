@@ -166,13 +166,13 @@ function updateMusicIcon() {
     if (volumeIcon) {
         if (isPlaying) {
             volumeIcon.innerHTML = `
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#344C38" stroke="#fff" stroke-width="1"></polygon>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08" stroke="#344C38" stroke-width="2"></path>
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#5B3324" stroke="#fff" stroke-width="1"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08" stroke="#5B3324" stroke-width="2"></path>
                 <circle cx="6.5" cy="12" r="1" fill="#C5A64B"/>
             `;
         } else {
             volumeIcon.innerHTML = `
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#344C38" stroke="#fff" stroke-width="1"></polygon>
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#5B3324" stroke="#fff" stroke-width="1"></polygon>
                 <line x1="19" y1="9" x2="17" y2="11" stroke="#D8B9B4" stroke-width="2"></line>
                 <line x1="17" y1="9" x2="19" y2="11" stroke="#D8B9B4" stroke-width="2"></line>
                 <circle cx="6.5" cy="12" r="1" fill="#D8B9B4"/>

@@ -23,9 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.google.com">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CCSB.css">
-    <link rel="stylesheet" href="regalo-modal.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=EB+Garamond:ital,wght@0,400..600;1,400..500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CCSB.css?v=10">
+    <link rel="stylesheet" href="regalo-modal.css?v=3">
         <style>
         /* Carrusel: 3 imágenes simultáneamente con foto central destacada */
         .carousel-track-container {
@@ -55,7 +55,7 @@
             max-height: 100%;
             object-fit: contain;
             border-radius: 0;
-            box-shadow: 0 10px 24px rgba(52, 76, 56, 0.35);
+            box-shadow: 0 10px 24px rgba(91, 51, 36, 0.35);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
@@ -69,15 +69,15 @@
             box-sizing: border-box !important;
             margin: 0 auto;
             object-fit: contain !important;
-            background: #344C38 !important;
-            border: 4px solid #344C38 !important;
+            background: #5B3324 !important;
+            border: 4px solid #5B3324 !important;
             border-bottom-width: 14px !important;
         }
 
         @media (min-width: 769px) {
             .carousel-item.is-center .framed-photo {
                 transform: scale(1.12) rotate(-0.2deg);
-                box-shadow: 0 34px 68px rgba(52, 76, 56, 0.45);
+                box-shadow: 0 34px 68px rgba(91, 51, 36, 0.45);
             }
         }
         
@@ -170,7 +170,6 @@
             object-fit: contain;
             transform-box: fill-box;
             transform-origin: 50% 20%;
-            animation: toast-clink 2.4s ease-in-out infinite;
             filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
         }
 
@@ -191,7 +190,7 @@
             height: 104px;
             max-width: 132px;
             object-fit: contain;
-            filter: drop-shadow(0 6px 10px rgba(16, 28, 19, 0.28));
+            filter: drop-shadow(0 6px 10px rgba(36, 20, 13, 0.28));
             transition: transform 0.3s ease;
         }
         .ceremonia-img { height: 92px; max-width: 120px; animation: icon-float 3.2s ease-in-out infinite; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35)); }
@@ -246,7 +245,7 @@
             transform: translateX(-50%);
             display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
             color: #F3EBDD; text-align: center; pointer-events: none;
-            font-family: 'Playfair Display', serif; letter-spacing: 0.22em;
+            font-family: 'Bodoni Moda', serif; letter-spacing: 0.22em;
             font-size: 0.85rem; text-transform: uppercase;
             text-shadow: 0 2px 10px rgba(0,0,0,0.55);
             transition: opacity 0.5s ease;
@@ -274,7 +273,7 @@
         .intro-overlay.is-playing .intro-hint { opacity: 0; }
         .intro-skip {
             position: absolute; z-index: 4; top: 18px; right: 18px;
-            background: rgba(16, 28, 19, 0.45); color: #F3EBDD;
+            background: rgba(36, 20, 13, 0.45); color: #F3EBDD;
             border: 1px solid rgba(214, 189, 145, 0.6); border-radius: 999px;
             padding: 0.4rem 0.9rem; font-size: 0.8rem; letter-spacing: 0.08em;
             cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
@@ -289,7 +288,7 @@
             font-family: 'Great Vibes', cursive; font-weight: 400;
             font-size: clamp(2.9rem, 7vw, 4.6rem); line-height: 1.05;
             color: #FBF7EF;
-            text-shadow: 0 2px 6px rgba(18, 30, 21, 0.55), 0 6px 26px rgba(18, 30, 21, 0.45);
+            text-shadow: 0 2px 6px rgba(36, 20, 13, 0.55), 0 6px 26px rgba(36, 20, 13, 0.45);
             pointer-events: none;
         }
         .hero-title .ht-word {
@@ -328,12 +327,12 @@
             top: max(84px, calc(13vw + 24px));
             text-align: center; padding: 0 1.25rem; pointer-events: none;
             color: #FBF7EF;
-            text-shadow: 0 2px 8px rgba(18, 30, 21, 0.65), 0 8px 30px rgba(18, 30, 21, 0.5);
+            text-shadow: 0 2px 8px rgba(36, 20, 13, 0.65), 0 8px 30px rgba(36, 20, 13, 0.5);
         }
         .hero-top::before {
             content: ""; position: absolute; z-index: -1;
             left: 0; right: 0; top: -40px; height: 200px;
-            background: linear-gradient(0deg, rgba(16, 28, 19, 0) 0%, rgba(16, 28, 19, 0.35) 60%);
+            background: linear-gradient(0deg, rgba(36, 20, 13, 0) 0%, rgba(36, 20, 13, 0.35) 60%);
         }
         .hero-top .hn-phrase { margin-top: 0.4rem; }
         .hero-top .hn-kicker, .hero-top .hn-phrase { opacity: 0; transform: translateY(-18px); filter: blur(10px); }
@@ -346,15 +345,15 @@
             bottom: max(110px, 14vh, calc(5vw + 50px));
             text-align: center; padding: 0 1rem; pointer-events: none;
             color: #FBF7EF;
-            text-shadow: 0 2px 8px rgba(18, 30, 21, 0.6), 0 8px 30px rgba(18, 30, 21, 0.45);
+            text-shadow: 0 2px 8px rgba(36, 20, 13, 0.6), 0 8px 30px rgba(36, 20, 13, 0.45);
         }
         .hero-names::before { /* velo suave para que siempre se lea */
             content: ""; position: absolute; z-index: -1;
             left: 0; right: 0; bottom: -40vh; height: calc(40vh + 300px);
-            background: linear-gradient(180deg, rgba(16, 28, 19, 0) 0%, rgba(16, 28, 19, 0.42) 45%, rgba(16, 28, 19, 0.42) 100%);
+            background: linear-gradient(180deg, rgba(36, 20, 13, 0) 0%, rgba(36, 20, 13, 0.42) 45%, rgba(36, 20, 13, 0.42) 100%);
         }
         .hn-kicker {
-            margin: 0 0 0.25rem; font-family: 'Playfair Display', serif;
+            margin: 0 0 0.25rem; font-family: 'Bodoni Moda', serif;
             text-transform: uppercase; letter-spacing: 0.42em;
             font-size: clamp(0.85rem, 2.6vw, 1.05rem); color: #D6BD91;
         }
@@ -370,7 +369,7 @@
         }
         .hn-phrase {
             margin: 0.7rem auto 0; max-width: 30rem;
-            font-family: 'Cormorant Garamond', 'Playfair Display', serif; font-style: italic;
+            font-family: 'Cormorant Garamond', 'Bodoni Moda', serif; font-style: italic;
             font-size: clamp(1rem, 3.6vw, 1.25rem); line-height: 1.35; color: #F3EBDD;
         }
         .intro-anim[hidden] { display: none; }
@@ -406,7 +405,7 @@
 
         /* ===== Última sección (pie) en un rojo más profundo ===== */
         .footer {
-            background: linear-gradient(180deg, #2C4130 0%, #1C2B1F 100%) !important;
+            background: linear-gradient(180deg, #4A2A1E 0%, #2A170F 100%) !important;
             border-top: 1px solid rgba(214, 189, 145, 0.45);
         }
         .footer-content h3 { color: #E3D2AE !important; }
@@ -453,8 +452,8 @@
         <div id="musicPlayer" class="music-player" style="display: none;">
             <button id="musicToggle" class="music-button modern-icon" title="Reproducir/Pausar música">
                 <svg id="volumeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#344C38" stroke="#fff" stroke-width="1"></polygon>
-                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08" stroke="#344C38" stroke-width="2"></path>
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#5B3324" stroke="#fff" stroke-width="1"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08" stroke="#5B3324" stroke-width="2"></path>
                     <circle cx="6.5" cy="12" r="1" fill="#C5A64B"/>
                 </svg>
             </button>
@@ -467,7 +466,7 @@
             <img class="hero-bg" src="foto0.jpg" alt="Portada boda Lissa y Henry">
             <div class="hero-overlay"></div>
             <div class="top-garland">
-                <img src="separador-flores.png" alt="">
+                <img src="separador-flores.png?v=6" alt="">
             </div>
             <div class="hero-names" aria-label="Nos casamos: Lissa y Henry">
                 <p class="hn-kicker">Nos casamos</p>
@@ -489,7 +488,7 @@
         <!-- Content -->
         <div class="content">
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <!-- Countdown -->
         <section class="countdown-section">
@@ -522,7 +521,7 @@
 
         <!-- Ceremony & Celebration -->
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <section class="events-section">
             <div class="events-container">
@@ -548,7 +547,7 @@
                 <!-- Celebration -->
                 <div class="event-card">
                     <div class="event-icon modern-icon toast-icon">
-                        <img src="iconos/copas.webp" alt="Copas brindando" class="toast-icon-img">
+                        <img src="iconos/copas-anim.webp?v=1" alt="Copas brindando" class="toast-icon-img copas-anim" loading="lazy">
                     </div>
                     <h3 class="event-title">Recepción</h3>
                     <div class="event-details">
@@ -568,7 +567,7 @@
 
         <!-- Party Information -->
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <section class="party-section">
             <div class="party-container">
@@ -607,7 +606,7 @@
 
         <!-- Gifts -->
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <section class="gifts-section">
             <div class="gifts-container">
@@ -624,7 +623,7 @@
 
         <!-- RSVP -->
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <section class="rsvp-section">
             <div class="rsvp-container">
@@ -641,7 +640,7 @@
 
         <!-- Footer -->
         <div class="section-divider">
-            <img src="separador-flores.png" alt="">
+            <img src="separador-flores.png?v=6" alt="">
         </div>
         <footer class="footer">
             <div class="footer-content">
@@ -679,7 +678,7 @@
             } catch(e) {}
         })();
         </script>
-        <script src="JAVAB.js?v=21" defer></script>
-        <script src="regalo-modal.js?v=2" defer></script>
+        <script src="JAVAB.js?v=22" defer></script>
+        <script src="regalo-modal.js?v=3" defer></script>
 </body>
 </html>

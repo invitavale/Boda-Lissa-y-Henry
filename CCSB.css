@@ -1,23 +1,23 @@
 /* Variables CSS */
 :root {
-    /* Paleta "Bosque Encantado" */
+    /* Paleta "Bosque Encantado en otoño" */
     --background: 39 52% 91%;      /* #F3EBDD marfil */
-    --foreground: 133 19% 19%;     /* #26382A verde bosque oscuro (texto) */
-    --primary: 130 19% 25%;
+    --foreground: 20 41% 16%;      /* #3A2218 chocolate (texto) */
+    --primary: 17 43% 25%;
     --primary-foreground: 39 52% 91%;
     --gold: 45 51% 53%;            /* #C5A64B dorado antiguo */
     --gold-light: 38 46% 70%;      /* #D6BD91 champagne */
-    --gold-dark: 42 45% 38%;       /* dorado profundo */
-    --brown: 130 19% 25%;          /* #344C38 verde bosque profundo */
-    --brown-light: 93 14% 48%;     /* #788B68 verde salvia */
-    --brown-dark: 134 21% 15%;     /* #1F3023 verde bosque noche */
-    --cream: 39 52% 91%;           /* #F3EBDD marfil */
-    --warm-white: 40 52% 96%;      /* #FBF7EF marfil claro */
-    --sage: 93 14% 48%;            /* #788B68 */
-    --moss: 51 14% 68%;            /* #B9B5A0 */
+    --gold-dark: 42 45% 38%;
+    --brown: 17 43% 25%;           /* #5B3324 chocolate terracota */
+    --brown-light: 18 41% 33%;     /* #7A4630 terracota */
+    --brown-dark: 18 44% 13%;      /* #2E1A12 cacao */
+    --cream: 39 52% 91%;
+    --warm-white: 40 52% 96%;
+    --sage: 58 28% 38%;            /* #7C7A45 oliva */
+    --moss: 35 42% 75%;            /* #D9C3A5 arena */
     --blush: 7 30% 78%;            /* #D8B9B4 rosa empolvado */
     --earth: 24 30% 50%;           /* #A47759 marrón tierra */
-    --shadow-elegant: 0 10px 30px -10px hsl(134 30% 8% / 0.22);
+    --shadow-elegant: 0 10px 30px -10px hsl(18 44% 8% / 0.22);
     --shadow-gold: 0 4px 20px hsl(45 51% 53% / 0.35);
 }
 
@@ -56,7 +56,7 @@ html, body {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'EB Garamond', Georgia, serif;
     background-color: #F3EBDD; /* beige crema */
     color: hsl(var(--foreground));
     line-height: 1.6;
@@ -90,7 +90,7 @@ html { background-color: #F3EBDD; }
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-weight: 700; font-size: 1.25rem;
     color: #fff;
     background: hsl(var(--brown-dark));
@@ -114,7 +114,7 @@ html { background-color: #F3EBDD; }
     margin: 0 auto;
 }
 .guest-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-size: clamp(0.9rem, 2.2vw, 1.05rem);
     padding: 0.5rem 1.1rem;
@@ -141,7 +141,7 @@ html { background-color: #F3EBDD; }
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(16, 28, 19, 0.6), rgba(16, 28, 19, 0.88));
+    background: linear-gradient(rgba(36, 20, 13, 0.6), rgba(36, 20, 13, 0.88));
     display: none; /* oculto por defecto: evita pantalla negra si JS falla */
     align-items: center;
     justify-content: center;
@@ -158,7 +158,7 @@ html { background-color: #F3EBDD; }
 }
 
 .welcome-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: 0.5px;
@@ -187,15 +187,15 @@ html { background-color: #F3EBDD; }
 
 /* Botón principal: rojo vino con texto crema */
 .btn-gold {
-    background-color: #344C38;
+    background-color: #5B3324;
     color: #F3EBDD;
-    border: 2px solid #344C38;
+    border: 2px solid #5B3324;
     border-radius: 9999px;
     padding: 0.65rem 1.1rem;
     cursor: pointer;
     transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
     font-weight: 600;
-    box-shadow: 0 6px 20px rgba(52, 76, 56, 0.45);
+    box-shadow: 0 6px 20px rgba(91, 51, 36, 0.45);
 }
 
 .btn-gold:hover { transform: translateY(-1px); }
@@ -253,12 +253,12 @@ html { background-color: #F3EBDD; }
     font-size: 1.6rem;
     color: #fff;
     margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .modal-names {
     font-size: 2.1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     color: #fff;
     margin-bottom: 1rem;
 }
@@ -514,9 +514,9 @@ html { background-color: #F3EBDD; }
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 3rem;
-    color: #26382A;
+    color: #3A2218;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -550,14 +550,14 @@ html { background-color: #F3EBDD; }
 .countdown-number {
     font-size: clamp(1.2rem, 4vw, 2rem);
     font-weight: 700;
-    color: #26382A;
+    color: #3A2218;
     margin-bottom: 0.1rem;
     animation: flip-in 0.6s ease-out;
 }
 
 .countdown-label {
     font-size: clamp(0.5rem, 1.8vw, 0.7rem);
-    color: #26382A;
+    color: #3A2218;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     font-weight: 500;
@@ -608,9 +608,9 @@ html { background-color: #F3EBDD; }
 }
 
 .event-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 2rem;
-    color: #26382A !important;
+    color: #3A2218 !important;
     margin-bottom: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -641,14 +641,14 @@ html { background-color: #F3EBDD; }
 }
 
 .event-details p {
-    color: #5F6E52;
+    color: #7A5A48;
 }
 
 .event-punctuality {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-style: italic;
     font-size: 0.92rem;
-    color: #344C38 !important;
+    color: #5B3324 !important;
     letter-spacing: 0.3px;
     margin-top: 0.35rem;
 }
@@ -674,7 +674,7 @@ html { background-color: #F3EBDD; }
     border-radius: 9999px;
     border: none;
     background: linear-gradient(135deg, #C5A64B, #D6BD91);
-    color: #26382A;
+    color: #3A2218;
     font-weight: 500;
     cursor: pointer;
     box-shadow: var(--shadow-elegant);
@@ -696,7 +696,7 @@ html { background-color: #F3EBDD; }
 .rsvp-container button {
     border-radius: 9999px !important;
     background: linear-gradient(90deg, #C5A64B 0%, #D6BD91 100%) !important;
-    color: #26382A !important;
+    color: #3A2218 !important;
     font-weight: 600;
     font-size: 1.1rem;
     box-shadow: 0 4px 18px -6px rgba(197, 166, 75, 0.18);
@@ -820,8 +820,8 @@ html { background-color: #F3EBDD; }
 .party-icon svg,
 .gift-icon svg,
 .whatsapp-icon svg {
-    color: #344C38 !important;
-    fill: #344C38 !important;
+    color: #5B3324 !important;
+    fill: #5B3324 !important;
 }
 
 .event-icon:hover,
@@ -876,7 +876,7 @@ html { background-color: #F3EBDD; }
     font-weight: 400;
 }
 .quote::before, .quote::after {
-    position: absolute; left: 50%; transform: translateX(-50%); color: #C5A64B; font-family: 'Playfair Display', serif;
+    position: absolute; left: 50%; transform: translateX(-50%); color: #C5A64B; font-family: 'Bodoni Moda', serif;
 }
 .quote::before { content: "“"; top: -1.5rem; font-size: 2rem; }
 .quote::after { content: "”"; bottom: -2.5rem; font-size: 2rem; }
@@ -889,16 +889,16 @@ html { background-color: #F3EBDD; }
     max-height: 100%;
     object-fit: contain;
     box-sizing: border-box;
-    background: #344C38;
-    border: 4px solid #344C38; /* rojo vino */
+    background: #5B3324;
+    border: 4px solid #5B3324; /* rojo vino */
     border-bottom-width: 14px; /* pie polaroid */
     border-radius: 4px;
-    box-shadow: 0 10px 24px rgba(52, 76, 56, 0.35);
+    box-shadow: 0 10px 24px rgba(91, 51, 36, 0.35);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .section-subtitle {
-    color: #5F6E52;
+    color: #7A5A48;
     margin-bottom: 3rem;
 }
 
@@ -1116,7 +1116,7 @@ html { background-color: #F3EBDD; }
 }
 
 .party-card p {
-    color: #5F6E52;
+    color: #7A5A48;
     margin-bottom: 1.5rem;
 }
 
@@ -1168,7 +1168,7 @@ html { background-color: #F3EBDD; }
 
 /* Footer */
 .footer {
-    background-color: #344C38; /* rojo vino */
+    background-color: #5B3324; /* rojo vino */
     color: #F3EBDD;
     padding: 3.5rem 1rem 2rem;
     text-align: center;
@@ -1179,7 +1179,7 @@ html { background-color: #F3EBDD; }
 }
 
 .footer-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1.5rem;
     margin: 0.5rem 0;
 }
@@ -1195,7 +1195,7 @@ html { background-color: #F3EBDD; }
     position: relative;
     max-width: 420px;
     width: 90%;
-    background: linear-gradient(135deg, rgba(28, 43, 31, 0.96), rgba(40, 60, 44, 0.96));
+    background: linear-gradient(135deg, rgba(42, 24, 16, 0.96), rgba(64, 38, 26, 0.96));
     border: 1px solid hsl(var(--gold) / 0.6);
     border-radius: 16px;
     padding: 2.5rem 2rem 2rem;
@@ -1206,7 +1206,7 @@ html { background-color: #F3EBDD; }
 }
 
 .modal-title-dark {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1.6rem;
     color: #C5A64B;
     margin-bottom: 1rem;
@@ -1258,11 +1258,11 @@ html { background-color: #F3EBDD; }
     position: fixed;
     top: 5rem;
     right: 1rem;
-    background: linear-gradient(135deg, rgba(28, 43, 31, 0.92), rgba(40, 60, 44, 0.92));
+    background: linear-gradient(135deg, rgba(42, 24, 16, 0.92), rgba(64, 38, 26, 0.92));
     border: 1px solid hsl(var(--gold) / 0.6);
     border-radius: 12px;
     padding: 1rem 1.25rem;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset, 0 0 0 1px rgba(52, 76, 56, 0.18);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset, 0 0 0 1px rgba(91, 51, 36, 0.18);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #fff;
@@ -1608,7 +1608,7 @@ html { background-color: #F3EBDD; }
 .event-details h4,
 .party-card h3,
 .hashtag {
-    color: #26382A !important;
+    color: #3A2218 !important;
 }
 
 /* Show carousel navigation buttons */
@@ -1662,7 +1662,7 @@ button[class*="carousel"] {
     .framed-photo { margin: 16px auto 24px; max-width: calc(100% - 32px); }
 }
 
-.framed-photo:hover { box-shadow: 0 15px 30px rgba(52, 76, 56, 0.3); }
+.framed-photo:hover { box-shadow: 0 15px 30px rgba(91, 51, 36, 0.3); }
 
 
 
@@ -1701,7 +1701,7 @@ button[class*="carousel"] {
 }
 
 .content > section:nth-of-type(even) {
-    background-color: #344C38 !important;
+    background-color: #5B3324 !important;
     color: #F3EBDD;
 }
 
@@ -1736,25 +1736,25 @@ button[class*="carousel"] {
 /* Botones de Fiesta y Regalos en rojo vino (color principal de la marca) */
 .party-card button,
 .gifts-container button {
-    background: linear-gradient(90deg, #344C38 0%, #4F6A52 100%) !important;
+    background: linear-gradient(90deg, #5B3324 0%, #7A4630 100%) !important;
     color: #F3EBDD !important;
-    box-shadow: 0 4px 18px -6px rgba(52, 76, 56, 0.35) !important;
+    box-shadow: 0 4px 18px -6px rgba(91, 51, 36, 0.35) !important;
 }
 
 .party-card button:hover,
 .gifts-container button:hover {
-    box-shadow: 0 8px 32px -8px rgba(52, 76, 56, 0.55) !important;
+    box-shadow: 0 8px 32px -8px rgba(91, 51, 36, 0.55) !important;
 }
 
 /* Botones de retroceder/adelantar del carrusel en rojo vino */
 .carousel-btn {
-    background: linear-gradient(90deg, #344C38 0%, #4F6A52 100%) !important;
+    background: linear-gradient(90deg, #5B3324 0%, #7A4630 100%) !important;
     color: #F3EBDD !important;
-    box-shadow: 0 4px 18px -6px rgba(52, 76, 56, 0.35) !important;
+    box-shadow: 0 4px 18px -6px rgba(91, 51, 36, 0.35) !important;
 }
 
 .carousel-btn:hover {
-    box-shadow: 0 8px 32px -8px rgba(52, 76, 56, 0.55) !important;
+    box-shadow: 0 8px 32px -8px rgba(91, 51, 36, 0.55) !important;
 }
 
 /* Portada (desktop): usar imagen por defecto y altura de la sección base */
@@ -1772,16 +1772,16 @@ html, body { background-color: #F3EBDD; }
     background-color: #F3EBDD !important;
     background-image:
         radial-gradient(120% 70% at 50% 0%, rgba(255, 252, 244, 0.85) 0%, rgba(255, 252, 244, 0) 60%),
-        radial-gradient(90% 60% at 50% 110%, rgba(185, 181, 160, 0.22) 0%, rgba(185, 181, 160, 0) 70%) !important;
+        radial-gradient(90% 60% at 50% 110%, rgba(196, 160, 120, 0.22) 0%, rgba(196, 160, 120, 0) 70%) !important;
 }
 
 .content > section:nth-of-type(even) {
     position: relative;
     isolation: isolate;
-    background-color: #344C38 !important;
+    background-color: #5B3324 !important;
     background-image:
-        radial-gradient(130% 80% at 50% 0%, rgba(120, 139, 104, 0.30) 0%, rgba(120, 139, 104, 0) 60%),
-        radial-gradient(140% 90% at 50% 120%, rgba(16, 28, 19, 0.55) 0%, rgba(16, 28, 19, 0) 70%) !important;
+        radial-gradient(130% 80% at 50% 0%, rgba(164, 98, 62, 0.30) 0%, rgba(164, 98, 62, 0) 60%),
+        radial-gradient(140% 90% at 50% 120%, rgba(36, 20, 13, 0.55) 0%, rgba(36, 20, 13, 0) 70%) !important;
     color: #F3EBDD;
 }
 
@@ -1811,7 +1811,7 @@ html, body { background-color: #F3EBDD; }
 
 /* ---------- Tipografía y títulos ---------- */
 .section-title {
-    color: #344C38;
+    color: #5B3324;
     font-weight: 600;
     letter-spacing: 0.01em;
 }
@@ -1827,7 +1827,7 @@ html, body { background-color: #F3EBDD; }
 }
 .content > section:nth-of-type(even) .event-details p,
 .content > section:nth-of-type(even) .event-address {
-    color: #CFCAB4 !important;
+    color: #E3CFB4 !important;
 }
 .content > section:nth-of-type(even) .event-punctuality { color: #D8B9B4 !important; }
 .event-title::before,
@@ -1839,7 +1839,7 @@ html, body { background-color: #F3EBDD; }
 
 .section-subtitle,
 .event-details p,
-.party-card p { color: #5F6E52; }
+.party-card p { color: #7A5A48; }
 
 /* Ramita botánica delicada bajo cada título de sección */
 .section-title::after {
@@ -1862,14 +1862,14 @@ html, body { background-color: #F3EBDD; }
     height: 78px;
     margin: 0 auto 0.5rem;
     background: center / contain no-repeat url("iconos/reloj.webp");
-    filter: drop-shadow(0 5px 8px rgba(38, 56, 42, 0.22));
+    filter: drop-shadow(0 5px 8px rgba(58, 34, 24, 0.22));
 }
 .countdown-number {
-    font-family: 'Playfair Display', serif;
-    color: #344C38;
+    font-family: 'Bodoni Moda', serif;
+    color: #5B3324;
     font-weight: 600;
 }
-.countdown-label { color: #788B68; letter-spacing: 0.14em; }
+.countdown-label { color: #7C7A45; letter-spacing: 0.14em; }
 .countdown-item:not(:last-child)::after { background-color: rgba(197, 166, 75, 0.55); }
 
 /* ---------- Botones ---------- */
@@ -1879,10 +1879,10 @@ html, body { background-color: #F3EBDD; }
 .party-card button,
 .gifts-container button,
 .rsvp-container button {
-    background: linear-gradient(135deg, #344C38 0%, #4F6A52 100%) !important;
+    background: linear-gradient(135deg, #5B3324 0%, #7A4630 100%) !important;
     color: #F3EBDD !important;
     border: 1px solid rgba(197, 166, 75, 0.65) !important;
-    box-shadow: 0 6px 18px -8px rgba(16, 28, 19, 0.55), inset 0 0 0 3px rgba(243, 235, 221, 0.06) !important;
+    box-shadow: 0 6px 18px -8px rgba(36, 20, 13, 0.55), inset 0 0 0 3px rgba(243, 235, 221, 0.06) !important;
     letter-spacing: 0.04em;
 }
 .btn-wedding:hover,
@@ -1890,32 +1890,32 @@ html, body { background-color: #F3EBDD; }
 .party-card button:hover,
 .gifts-container button:hover,
 .rsvp-container button:hover {
-    box-shadow: 0 10px 28px -10px rgba(16, 28, 19, 0.6), 0 0 0 4px rgba(197, 166, 75, 0.15) !important;
+    box-shadow: 0 10px 28px -10px rgba(36, 20, 13, 0.6), 0 0 0 4px rgba(197, 166, 75, 0.15) !important;
 }
 /* Sobre el verde profundo: botón champagne con texto verde bosque */
 .content > section:nth-of-type(even) .btn-wedding {
     background: linear-gradient(135deg, #D6BD91 0%, #E8D6B2 100%) !important;
-    color: #26382A !important;
+    color: #3A2218 !important;
     border: 1px solid rgba(243, 235, 221, 0.55) !important;
     box-shadow: 0 8px 22px -10px rgba(0, 0, 0, 0.55) !important;
 }
 
 /* Carrusel */
 .carousel-btn {
-    background: rgba(52, 76, 56, 0.92) !important;
+    background: rgba(91, 51, 36, 0.92) !important;
     color: #F3EBDD !important;
     border: 1px solid rgba(197, 166, 75, 0.6) !important;
-    box-shadow: 0 6px 16px -6px rgba(16, 28, 19, 0.5) !important;
+    box-shadow: 0 6px 16px -6px rgba(36, 20, 13, 0.5) !important;
 }
-.carousel-counter { color: #788B68; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; }
+.carousel-counter { color: #7C7A45; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; }
 
 /* Fotos: marco verde bosque con filete dorado */
 .framed-photo {
-    background: #344C38 !important;
-    border-color: #344C38 !important;
+    background: #5B3324 !important;
+    border-color: #5B3324 !important;
     outline: 1px solid rgba(197, 166, 75, 0.55);
     outline-offset: -5px;
-    box-shadow: 0 14px 30px -10px rgba(38, 56, 42, 0.45) !important;
+    box-shadow: 0 14px 30px -10px rgba(58, 34, 24, 0.45) !important;
 }
 
 /* ---------- Iconos ilustrados ---------- */
@@ -1948,7 +1948,7 @@ html, body { background-color: #F3EBDD; }
     border-radius: calc(2rem - 7px);
     pointer-events: none;
 }
-.party-card h3 { color: #344C38 !important; font-family: 'Playfair Display', serif; }
+.party-card h3 { color: #5B3324 !important; font-family: 'Bodoni Moda', serif; }
 .party-card:hover { box-shadow: 0 24px 46px -22px rgba(0, 0, 0, 0.65); }
 
 /* ---------- Fiesta: mariposa dorada que revolotea ---------- */
@@ -1964,7 +1964,7 @@ html, body { background-color: #F3EBDD; }
     opacity: 0.9;
     pointer-events: none;
     animation: butterfly-drift 7s ease-in-out infinite;
-    filter: drop-shadow(0 4px 6px rgba(38, 56, 42, 0.2));
+    filter: drop-shadow(0 4px 6px rgba(58, 34, 24, 0.2));
 }
 @keyframes butterfly-drift {
     0%, 100% { transform: translate(0, 0) rotate(-6deg) scaleX(1); }
@@ -1980,29 +1980,29 @@ html, body { background-color: #F3EBDD; }
 .guest-section {
     background: #FBF7EF;
     border: 1px solid rgba(197, 166, 75, 0.4);
-    box-shadow: 0 14px 30px -18px rgba(38, 56, 42, 0.35);
+    box-shadow: 0 14px 30px -18px rgba(58, 34, 24, 0.35);
 }
-.guest-badge { background: #344C38; color: #F3EBDD; box-shadow: 0 0 0 3px rgba(197,166,75,0.35); }
-.guest-title { color: #344C38; }
-.guest-name.color-1 { background: rgba(120, 139, 104, 0.16); }
+.guest-badge { background: #5B3324; color: #F3EBDD; box-shadow: 0 0 0 3px rgba(197,166,75,0.35); }
+.guest-title { color: #5B3324; }
+.guest-name.color-1 { background: rgba(164, 98, 62, 0.16); }
 .guest-name.color-2 { background: rgba(214, 189, 145, 0.30); }
 .guest-name.color-3 { background: rgba(216, 185, 180, 0.32); }
-.guest-name.color-4 { background: rgba(185, 181, 160, 0.30); }
+.guest-name.color-4 { background: rgba(196, 160, 120, 0.30); }
 
 /* ---------- Música ---------- */
 .music-button {
-    background: radial-gradient(circle at 35% 30%, #4F6A52 0%, #344C38 70%) !important;
+    background: radial-gradient(circle at 35% 30%, #7A4630 0%, #5B3324 70%) !important;
     border: 1px solid rgba(197, 166, 75, 0.7);
-    box-shadow: 0 8px 20px -8px rgba(16, 28, 19, 0.6), 0 0 14px rgba(214, 189, 145, 0.25);
+    box-shadow: 0 8px 20px -8px rgba(36, 20, 13, 0.6), 0 0 14px rgba(214, 189, 145, 0.25);
 }
 .music-button svg polygon { fill: #F3EBDD; stroke: #F3EBDD; }
 .music-button svg path { stroke: #D6BD91; }
 
 /* ---------- Modales y avisos ---------- */
-.modal-overlay { background: linear-gradient(rgba(16, 28, 19, 0.55), rgba(16, 28, 19, 0.85)); }
+.modal-overlay { background: linear-gradient(rgba(36, 20, 13, 0.55), rgba(36, 20, 13, 0.85)); }
 .dresscode-modal,
 .toast {
-    background: linear-gradient(160deg, rgba(52, 76, 56, 0.97), rgba(31, 48, 35, 0.97));
+    background: linear-gradient(160deg, rgba(91, 51, 36, 0.97), rgba(46, 26, 18, 0.97));
     border: 1px solid rgba(197, 166, 75, 0.55);
 }
 .modal-title-dark { color: #D6BD91; }
@@ -2038,7 +2038,7 @@ html, body { background-color: #F3EBDD; }
 }
 .footer-content p { color: #F3EBDD !important; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; }
 .footer-content h3 { color: #D6BD91 !important; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 2.3rem; }
-.footer-date { color: #B9B5A0 !important; letter-spacing: 0.24em; text-transform: uppercase; font-size: 0.78rem; }
+.footer-date { color: #D9C3A5 !important; letter-spacing: 0.24em; text-transform: uppercase; font-size: 0.78rem; }
 
 /* ---------- Portada: luces cálidas suaves sobre la foto ---------- */
 .hero-overlay {
@@ -2061,10 +2061,10 @@ html, body { background-color: #F3EBDD; }
 /* Tarjetas de Fiesta sobre marfil: un poco más de relieve */
 .content > section:nth-of-type(odd) .party-card {
     background: #FFFDF8;
-    box-shadow: 0 18px 40px -24px rgba(38, 56, 42, 0.45);
+    box-shadow: 0 18px 40px -24px rgba(58, 34, 24, 0.45);
 }
 .party-card .party-note-strong {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     letter-spacing: 0.32em;
     text-transform: uppercase;
     font-size: 0.95rem;
@@ -2120,8 +2120,8 @@ html, body { background-color: #F3EBDD; }
     filter: blur(1.2px);
 }
 .party-card .party-thanks {
-    font-family: 'Playfair Display', serif;
-    color: #344C38;
+    font-family: 'Bodoni Moda', serif;
+    color: #5B3324;
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -2213,3 +2213,211 @@ html, body { background-color: #F3EBDD; }
 .party-section .section-subtitle {
     text-shadow: 0 0 6px #F6F0E4, 0 0 12px #F6F0E4, 0 0 18px #F6F0E4;
 }
+
+/* =====================================================================
+   OTOÑO EDITORIAL — tipografía y detalles
+   ===================================================================== */
+body { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; }
+
+.section-title {
+    font-family: 'Bodoni Moda', 'Didot', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.005em;
+    line-height: 1.05;
+    font-size: clamp(2.3rem, 6vw, 3.3rem) !important;
+}
+.section-subtitle {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 1.22rem;
+    line-height: 1.5;
+    max-width: 34rem;
+    margin-left: auto; margin-right: auto;
+    padding: 0 1rem;
+}
+.event-title {
+    font-family: 'Bodoni Moda', serif !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    font-size: 2.3rem !important;
+    letter-spacing: 0;
+}
+.event-details h4 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+.event-details p { font-size: 1.18rem; }
+.event-details .event-address { font-size: 1rem; font-style: italic; }
+.event-punctuality { font-family: 'EB Garamond', serif !important; font-size: 1.05rem !important; }
+
+.countdown-number {
+    font-family: 'Bodoni Moda', serif !important;
+    font-weight: 500 !important;
+    font-size: clamp(2rem, 6vw, 2.6rem) !important;
+    letter-spacing: -0.01em;
+}
+.countdown-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.26em !important;
+    font-weight: 500;
+}
+
+.btn-wedding,
+.party-card button,
+.gifts-container button,
+.rsvp-container button {
+    font-family: 'EB Garamond', Georgia, serif !important;
+    font-weight: 500 !important;
+    font-size: 0.92rem !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase;
+    padding: 0.85rem 2.2rem !important;
+}
+
+.party-card h3 {
+    font-family: 'Bodoni Moda', serif !important;
+    font-weight: 500 !important;
+    font-size: 1.45rem !important;
+    line-height: 1.2;
+}
+.party-card p { font-size: 1.12rem; }
+.party-card .party-quote { font-family: 'EB Garamond', serif; font-size: 1.22rem; }
+.party-card .party-thanks { font-family: 'Bodoni Moda', serif; font-style: italic; font-size: 1.1rem; }
+
+.hn-kicker { font-family: 'Bodoni Moda', serif !important; letter-spacing: 0.5em !important; font-weight: 400; }
+.hn-phrase { font-family: 'EB Garamond', serif !important; }
+
+.footer-content p { font-family: 'EB Garamond', serif !important; }
+.footer-content h3 {
+    font-family: 'Bodoni Moda', serif !important;
+    font-style: italic;
+    font-weight: 400 !important;
+    font-size: clamp(1.6rem, 5.5vw, 2.3rem) !important;
+    letter-spacing: 0.01em;
+}
+.footer-date { font-family: 'EB Garamond', serif; }
+.modal-title-dark { font-family: 'Bodoni Moda', serif !important; font-weight: 500; }
+.modal-text-dark { font-family: 'EB Garamond', serif; font-size: 1.15rem; }
+.guest-name { font-family: 'Bodoni Moda', serif !important; font-weight: 500 !important; }
+
+/* Acentos otoñales: terracota en detalles pequeños */
+.countdown-label { color: #A0583A !important; }
+.party-card .party-quote { color: #A0583A; }
+.countdown-item:not(:last-child)::after { background-color: rgba(160, 88, 58, 0.35); }
+
+/* Sin mariposa en Detalles */
+.party-section::after { content: none !important; display: none !important; }
+
+/* Copas animadas: mismo tamaño que el icono anterior */
+.toast-icon-img.copas-anim { width: 104px; height: auto; animation: none; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35)); }
+
+/* ===== Ramos florales también en Cuenta regresiva y Confirmación ===== */
+.countdown-section,
+.rsvp-section { position: relative; isolation: isolate; }
+.countdown-section::before,
+.rsvp-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-image:
+        url("iconos/ramos/tl.webp"),
+        url("iconos/ramos/tr.webp"),
+        url("iconos/ramos/ml-e.webp"),
+        url("iconos/ramos/mr.webp"),
+        url("iconos/ramos/bl.webp"),
+        url("iconos/ramos/br.webp");
+    background-size: 260px auto, 200px auto, 230px auto, 240px auto, 250px auto, 230px auto;
+    background-position:
+        left -70px top 20px,
+        right -40px top 10px,
+        right -110px top 55%,
+        left -120px top 45%,
+        left -80px bottom -20px,
+        right -60px bottom -10px;
+}
+.rsvp-section::before {
+    background-image:
+        url("iconos/ramos/tl-e.webp"),
+        url("iconos/ramos/tr.webp"),
+        url("iconos/ramos/ml.webp"),
+        url("iconos/ramos/mr2-e.webp"),
+        url("iconos/ramos/bl-e.webp"),
+        url("iconos/ramos/br.webp");
+}
+@media (max-width: 768px) {
+    .countdown-section::before,
+    .rsvp-section::before {
+        background-size: 190px auto, 150px auto, 170px auto, 180px auto, 180px auto, 170px auto;
+        background-position:
+            left -80px top 10px,
+            right -55px top 0px,
+            right -100px top 52%,
+            left -105px top 40%,
+            left -85px bottom -20px,
+            right -75px bottom -10px;
+    }
+}
+.countdown-section .section-title,
+.rsvp-section .section-title,
+.rsvp-section .section-subtitle,
+.countdown-number, .countdown-label {
+    text-shadow: 0 0 6px #F6F0E4, 0 0 12px #F6F0E4, 0 0 18px #F6F0E4;
+}
+@media (max-width: 768px) {
+    .top-garland { top: -26px !important; }
+    .countdown-section { padding-bottom: 3.2rem !important; }
+    .countdown-label { letter-spacing: 0.12em !important; font-size: 0.66rem !important; }
+}
+/* Ramos de fondo: nítidos pero tenues */
+.party-section::before,
+.content > section.party-section::before,
+.countdown-section::before,
+.rsvp-section::before {
+    filter: none !important;
+    opacity: 0.32 !important;
+}
+/* Guirnalda superior: opción C */
+.top-garland { top: -200px !important; }
+@media (max-width: 768px) { .top-garland { top: -55px !important; } }
+/* Guirnaldas completas (sin recorte) y más pequeñas */
+.top-garland {
+    top: 10px !important;
+    left: 0 !important; right: 0 !important;
+    margin: 0 auto;
+    width: min(720px, 90%) !important;
+}
+.top-garland img { width: 100%; height: auto; }
+.section-divider img {
+    left: 50% !important;
+    width: min(600px, 86%) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    transform: translate(-50%, -50%) !important;
+}
+@media (max-width: 768px) {
+    .top-garland { top: 8px !important; width: 90% !important; }
+    .section-divider img { width: 88% !important; height: auto !important; }
+}
+@media (min-width: 769px) {
+    .section-divider img { width: min(500px, 80%) !important; }
+    .content > section { padding-top: 5.2rem !important; }
+}
+@media (max-width: 768px) {
+    .content > section:not(.countdown-section) { padding-top: 3.6rem !important; }
+}
+/* Flores divisoras más pequeñas */
+.section-divider img { width: min(340px, 62%) !important; }
+@media (max-width: 768px) { .section-divider img { width: 62% !important; } }
+/* Guirnalda superior nueva: posición C (cuelga del borde superior) */
+.top-garland { width: 100% !important; top: -170px !important; }
+@media (max-width: 768px) { .top-garland { width: 100% !important; top: -48px !important; } }
+/* Sin guirnalda superior en la portada */
+.top-garland { display: none !important; }

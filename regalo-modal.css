@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    background: rgba(16, 28, 19, 0.55);
+    background: rgba(36, 20, 13, 0.55);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
@@ -26,11 +26,11 @@
     border-radius: 24px;
     background: #FBF7EF;
     border: 1px solid rgba(197, 166, 75, .55);
-    box-shadow: 0 30px 60px -20px rgba(16, 28, 19, .55);
+    box-shadow: 0 30px 60px -20px rgba(36, 20, 13, .55);
     transform: translateY(24px) scale(.97);
     transition: transform .35s cubic-bezier(.2, .8, .2, 1);
     font-family: 'Cormorant Garamond', Georgia, serif;
-    color: #26382A;
+    color: #3A2218;
     text-align: center;
 }
 .rg-overlay.open .rg-sheet { transform: none; }
@@ -45,7 +45,7 @@
     border-radius: 50%;
     border: 1px solid rgba(197, 166, 75, .6);
     background: rgba(251, 247, 239, .9);
-    color: #344C38;
+    color: #5B3324;
     font-size: 20px;
     line-height: 1;
     cursor: pointer;
@@ -62,7 +62,7 @@
     border-radius: 999px;
     border: 1px solid rgba(197, 166, 75, .6);
     background: rgba(251, 247, 239, .9);
-    color: #344C38;
+    color: #5B3324;
     font: 600 14px 'Cormorant Garamond', Georgia, serif;
     cursor: pointer;
 }
@@ -73,10 +73,10 @@
     font-family: 'Great Vibes', cursive;
     font-size: 2.6rem;
     line-height: 1.1;
-    color: #344C38;
+    color: #5B3324;
     margin-bottom: 4px;
 }
-.rg-sub { font-size: 1.05rem; color: rgba(38, 56, 42, .75); margin-bottom: 22px; }
+.rg-sub { font-size: 1.05rem; color: rgba(58, 34, 24, .75); margin-bottom: 22px; }
 
 .rg-option {
     width: 100%;
@@ -94,19 +94,19 @@
     color: inherit;
     transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.rg-option:hover { transform: translateY(-2px); box-shadow: 0 8px 22px -10px rgba(52, 76, 56, .45); border-color: #C5A64B; }
+.rg-option:hover { transform: translateY(-2px); box-shadow: 0 8px 22px -10px rgba(91, 51, 36, .45); border-color: #C5A64B; }
 .rg-option-icon {
     flex: 0 0 48px;
     height: 48px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, #344C38 0%, #4F6A52 100%);
+    background: linear-gradient(135deg, #5B3324 0%, #7A4630 100%);
     box-shadow: inset 0 0 0 1px rgba(197, 166, 75, .7);
     color: #fff;
 }
-.rg-option-text strong { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: #344C38; }
-.rg-option-text span { font-size: .98rem; color: rgba(38, 56, 42, .7); }
+.rg-option-text strong { display: block; font-family: 'Bodoni Moda', Georgia, serif; font-size: 1.1rem; font-weight: 600; color: #5B3324; }
+.rg-option-text span { font-size: .98rem; color: rgba(58, 34, 24, .7); }
 .rg-option-arrow { margin-left: auto; color: #C5A64B; font-size: 1.3rem; }
 
 /* Paso 2: datos bancarios con fondo de papel */
@@ -134,8 +134,8 @@
     text-align: left;
 }
 .rg-row-text { flex: 1; min-width: 0; }
-.rg-label { display: block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #344C38; font-weight: 600; }
-.rg-value { display: block; font-family: 'Playfair Display', Georgia, serif; font-size: 1.12rem; color: #26382A; word-break: break-all; }
+.rg-label { display: block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #5B3324; font-weight: 600; }
+.rg-value { display: block; font-family: 'Bodoni Moda', Georgia, serif; font-size: 1.12rem; color: #3A2218; word-break: break-all; }
 
 .rg-copy {
     flex: 0 0 40px;
@@ -143,16 +143,16 @@
     border-radius: 10px;
     border: 1px solid rgba(197, 166, 75, .6);
     background: #FBF7EF;
-    color: #344C38;
+    color: #5B3324;
     cursor: pointer;
     display: grid;
     place-items: center;
     transition: background .2s ease, color .2s ease;
 }
 .rg-copy:hover { background: #EDE4D2; }
-.rg-copy.copied { background: #344C38; color: #fff; border-color: #344C38; }
+.rg-copy.copied { background: #5B3324; color: #fff; border-color: #5B3324; }
 
-.rg-note { margin-top: 12px; font-size: .95rem; color: rgba(38, 56, 42, .75); font-style: italic; }
+.rg-note { margin-top: 12px; font-size: .95rem; color: rgba(58, 34, 24, .75); font-style: italic; }
 
 .rg-toast {
     position: fixed;
@@ -162,7 +162,7 @@
     transform: translate(-50%, 20px);
     padding: 10px 18px;
     border-radius: 999px;
-    background: #26382A;
+    background: #3A2218;
     color: #EDE4D2;
     font: 600 15px 'Cormorant Garamond', Georgia, serif;
     opacity: 0;
@@ -177,10 +177,10 @@
 .rg-holder { margin-top: 14px; }
 .rg-holder + .rg-holder { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(197, 166, 75, .45); }
 .rg-holder-name {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Bodoni Moda', Georgia, serif;
     font-size: 1.15rem;
     font-weight: 600;
-    color: #344C38;
+    color: #5B3324;
     letter-spacing: .02em;
 }
 .rg-holder .rg-row { margin-top: 6px; padding: 8px 12px; }
@@ -199,3 +199,6 @@
     height: auto;
 }
 .rg-dress .rg-close { top: 6px; right: 6px; width: 30px; height: 30px; font-size: 17px; }
+.rg-title { font-family: 'Bodoni Moda', Georgia, serif !important; font-style: italic; font-weight: 400; font-size: 2.2rem !important; }
+.rg-sheet { font-family: 'EB Garamond', Georgia, serif; }
+.rg-holder-name, .rg-option-text strong, .rg-value { font-family: 'Bodoni Moda', Georgia, serif !important; }
