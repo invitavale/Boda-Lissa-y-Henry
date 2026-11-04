@@ -2941,3 +2941,11 @@ body { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; }
             center bottom -60px !important;
     }
 }
+
+/* Celular en vibración (tomado de la inspiración) */
+.party-card .celular-img.insp-ico { height: 92px !important; width: auto !important; }
+.party-card p strong { color: #5B3324; font-weight: 600; }
+/* 4 tarjetas: en escritorio quedan en 2 x 2 */
+@media (min-width: 769px) {
+    .party-section .party-grid { grid-template-columns: repeat(2, minmax(230px, 300px)); }
+}
