@@ -2775,3 +2775,120 @@ body { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; }
 .footer-content::before {
     filter: invert(1) sepia(1) saturate(0.9) hue-rotate(-8deg) brightness(0.98) drop-shadow(0 0 10px rgba(240, 214, 150, 0.35)) !important;
 }
+
+/* =====================================================================
+   SEGUNDA RONDA DE CAMBIOS — noviembre 2026
+   A) Faltan: fecha escrita → calendario → "Faltan" + conteo
+   B) Recepción: Salón Apolo 1 y 2
+   C) Acuarelas de la iglesia y el hotel
+   E) Pareja a lápiz en Código de Vestimenta
+   F) Regalo y Confirmación: íconos a lápiz, sin animación
+   ===================================================================== */
+
+/* ---------- A) Fecha escrita ---------- */
+.fecha-escrita { text-align: center; margin: 0.4rem auto 0; padding: 0 1rem; }
+.fecha-escrita p { margin: 0; }
+.fe-dia {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: #D6BD91;
+    padding-left: 0.42em; /* compensa el espaciado para centrar */
+}
+.fe-fecha {
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: clamp(2.6rem, 9vw, 3.6rem);
+    line-height: 1.15;
+    color: #F3EBDD;
+    margin: 0.1rem 0 0.15rem !important;
+}
+.fe-hora {
+    display: inline-block;
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    color: #D6BD91;
+    padding: 0.25rem 0 0.25rem 0.3em;
+    border-top: 1px solid rgba(214, 189, 145, 0.45);
+    border-bottom: 1px solid rgba(214, 189, 145, 0.45);
+}
+/* Calendario debajo de la fecha */
+.countdown-section .calendario {
+    margin: 2rem auto 0;
+    padding: 0 0.5rem 2.2rem;
+    border-top: none;
+    border-bottom: 1px solid rgba(214, 189, 145, 0.35);
+}
+/* "Faltan" con el reloj, debajo del calendario */
+.countdown-section .faltan-titulo { margin-top: 2.2rem !important; }
+
+/* ---------- B) Nombre del salón ---------- */
+.lugar-sitio .lugar-salon {
+    display: block;
+    margin-top: 0.2rem;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #A0583A;
+}
+
+/* ---------- C) Acuarelas en las tarjetas ---------- */
+.lugar-ilus.lugar-acuarela {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+    margin: 0.8rem auto 1.2rem;
+}
+.lugar-ilus.lugar-acuarela-ancha { width: 100%; max-height: 240px; object-fit: contain; margin-top: 1rem; margin-bottom: 1.3rem; }
+
+/* ---------- E) Pareja en Código de Vestimenta ---------- */
+.party-card .dress-ilus.dress-pareja { display: block; max-width: none; margin: 0 auto 1.2rem; }
+.party-card .dress-ilus.dress-pareja img { width: auto; height: 118px; margin: 0 auto; }
+
+/* ---------- F) Regalo y Confirmación sin animación ---------- */
+.gifts-container .gift-icon,
+.rsvp-container .whatsapp-icon,
+.gifts-container .gift-icon:hover,
+.rsvp-container .whatsapp-icon:hover {
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+.theme-icon-img.insp-fijo,
+.gifts-container:hover .theme-icon-img.insp-fijo,
+.rsvp-container:hover .theme-icon-img.insp-fijo {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    height: 112px !important;
+    max-width: 150px !important;
+    filter: drop-shadow(0 6px 10px rgba(36, 20, 13, 0.18)) !important;
+}
+.gifts-section .theme-icon-img.insp-fijo { filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35)) !important; }
+
+/* =====================================================================
+   TERCERA RONDA — noviembre 2026
+   ===================================================================== */
+/* Calendario: "¡Agéndalo!" en lugar de "Enero 2027" */
+.countdown-section .cal-agendalo {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;
+}
+/* Sin flores bajo los títulos de sección */
+.section-title::after,
+.content > section:nth-of-type(even) .section-title::after,
+.content > section:nth-of-type(odd) .section-title::after {
+    content: none !important;
+    display: none !important;
+}
+.section-title { margin-bottom: 1rem !important; }
+/* Reloj nuevo a lápiz */
+.countdown-section .section-title::before {
+    width: 92px !important;
+    height: 92px !important;
+    background-image: url("iconos/insp/reloj.webp") !important;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35)) !important;
+}

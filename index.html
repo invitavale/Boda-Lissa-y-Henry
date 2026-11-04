@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.google.com">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=EB+Garamond:ital,wght@0,400..600;1,400..500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CCSB.css?v=13">
+    <link rel="stylesheet" href="CCSB.css?v=16">
     <link rel="stylesheet" href="regalo-modal.css?v=4">
         <style>
         /* Carrusel: 3 imágenes simultáneamente con foto central destacada */
@@ -506,7 +506,16 @@
                 <p id="guestSubtitle" class="guest-subtitle" style="display:none;"></p>
                 <div id="guestGreeting" class="guest-greeting"></div>
             </div>
-            <h2 class="section-title">Faltan</h2>
+            <div class="fecha-escrita" aria-label="Sábado 23 de enero de 2027, 5:00 de la tarde">
+                <p class="fe-dia">Sábado</p>
+                <p class="fe-fecha">23 de enero de 2027</p>
+                <p class="fe-hora">5:00 PM</p>
+            </div>
+            <div class="calendario" aria-label="Calendario: sábado 23 de enero de 2027">
+                <p class="cal-kicker cal-agendalo">¡Agéndalo!</p>
+                <div class="cal-grid" id="calGrid"></div>
+            </div>
+            <h2 class="section-title faltan-titulo">Faltan</h2>
             <div class="countdown-container">
                 <div class="countdown-item">
                     <div class="countdown-number" id="days">00</div>
@@ -525,11 +534,6 @@
                     <div class="countdown-label">SEGUNDOS</div>
                 </div>
             </div>
-            <div class="calendario" aria-label="Calendario: sábado 23 de enero de 2027">
-                <p class="cal-kicker">Guarda la fecha</p>
-                <p class="cal-mes" id="calMes">Enero 2027</p>
-                <div class="cal-grid" id="calGrid"></div>
-            </div>
         </div>
 
         <!-- Ceremonia y Recepción (fondo marfil, cada una en su tarjeta) -->
@@ -538,7 +542,7 @@
             <div class="lugares-grid">
                 <article class="lugar-card">
                     <h3 class="lugar-titulo">Ceremonia</h3>
-                    <img class="lugar-ilus" src="iconos/insp/iglesia.webp" alt="Ilustración de una iglesia">
+                    <img class="lugar-ilus lugar-acuarela" src="iconos/insp/iglesia-acuarela.webp" alt="Acuarela del Santuario Nuestra Señora de la Altagracia">
                     <p class="lugar-fecha">Sábado 23 de enero, 2027</p>
                     <div class="lugar-fila">
                         <span class="lugar-hora">5:00 PM</span>
@@ -552,12 +556,12 @@
 
                 <article class="lugar-card">
                     <h3 class="lugar-titulo">Recepción</h3>
-                    <img class="lugar-ilus lugar-ilus-ancha" src="iconos/insp/salon.webp" alt="Ilustración del salón">
+                    <img class="lugar-ilus lugar-acuarela lugar-acuarela-ancha" src="iconos/insp/hotel-acuarela.webp" alt="Acuarela del Hotel Dominican Fiesta">
                     <p class="lugar-fecha">Sábado 23 de enero, 2027</p>
                     <div class="lugar-fila">
                         <span class="lugar-hora">7:00 PM</span>
                         <span class="lugar-barra"></span>
-                        <span class="lugar-sitio">Hotel Dominican Fiesta</span>
+                        <span class="lugar-sitio">Hotel Dominican Fiesta<small class="lugar-salon">Salón Apolo 1 y 2</small></span>
                     </div>
                     <p class="lugar-dir">Av. Anacaona #101, Los Cacicazgos, Santo Domingo, República Dominicana</p>
                     <p class="lugar-nota">Recepción, cena y fiesta</p>
@@ -620,9 +624,8 @@
 
                 <div class="party-grid">
                     <div class="party-card">
-                        <div class="dress-ilus">
-                            <img src="iconos/insp/dress-hombres.webp" alt="Ejemplos de vestimenta para caballeros">
-                            <img src="iconos/insp/dress-mujeres.webp" alt="Ejemplos de vestimenta para damas">
+                        <div class="dress-ilus dress-pareja">
+                            <img src="iconos/insp/vestimenta-pareja.webp" alt="Pareja vestida de gala: traje y vestido largo">
                         </div>
                         <h3>Código de Vestimenta</h3>
                         <button class="btn-wedding" onclick="showDressCode()">Ver más</button>
@@ -657,7 +660,7 @@
                 <p class="section-subtitle">Poder celebrar contigo es nuestro mejor regalo. Pero si deseas hacernos un obsequio, aquí tienes nuestra lista de regalos y nuestros datos bancarios.</p>
                 
                 <div class="gift-icon modern-icon">
-                    <img src="iconos/regalo.webp" alt="Regalo" class="theme-icon-img regalo-img">
+                    <img src="iconos/insp/regalo.webp" alt="Regalo" class="theme-icon-img regalo-img insp-fijo">
                 </div>
 
                 <button class="btn-wedding" onclick="showGifts()">Ver más</button>
@@ -672,7 +675,7 @@
                 <p class="section-subtitle">Por favor confírmanos tu asistencia con anticipación</p>
                 
                 <div class="whatsapp-icon modern-icon">
-                    <img src="iconos/check.webp" alt="Confirmar asistencia" class="theme-icon-img rsvp-img">
+                    <img src="iconos/insp/confirmar.webp" alt="Confirmar asistencia" class="theme-icon-img rsvp-img insp-fijo">
                 </div>
 
                 <button class="btn-wedding" onclick="confirmAttendance()">Confirmar Asistencia</button>
