@@ -123,7 +123,7 @@ function setupMusic() {
 // subiendo suavemente y enfocándose.
 function setupScrollReveal() {
     if (!('IntersectionObserver' in window)) return;
-    const items = document.querySelectorAll('.content section > *:not(.section-divider), .content .countdown-section > *, .content .footer-content');
+    const items = document.querySelectorAll('.content section > *:not(.section-divider), .content .countdown-section > *, .content .bienvenida-section > *, .content .footer-verso, .content .footer-content');
     const io = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
